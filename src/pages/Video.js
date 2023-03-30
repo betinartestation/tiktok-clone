@@ -11,7 +11,7 @@ function Video() {
     function handleStart(){
 
       /* Play e Pause no click do mouse */
-      if(play){ /* Quando estiver tocando, queremos que pause seja */
+      if(play){ /* Quando estiver tocando, queremos que pause seja false*/
         videoRef.current.pause()
         setPlay(false) /* Mudar o valor do play pra nao ficar infinito */
       } else { /* Quando nao estiver tocando, queremos que play seja true */
