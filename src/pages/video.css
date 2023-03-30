@@ -1,0 +1,16 @@
+.video {
+    background-color: green;
+    /*Structure*/
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start; /* N ENTENDI OQ EH ISSO */
+    /*Para que componentes que estarao na frente dele tenham posicao absoluta*/
+    position: relative; /*App.css tambem*/ /* Elementos se comportam de forma solta na tela */
+}
+
+.video__player {
+    height: 100%;   
+    width: 100%;
+    /*Para que o video nao fique bugado dentro e posicionado errado*/
+    object-fit: cover;
+}

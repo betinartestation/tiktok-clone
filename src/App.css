@@ -1,0 +1,47 @@
+html {
+  scroll-snap-type: y mandatory; /* Mesmo comportamento que os snaps nos videos */
+}
+
+/*Estilizar elemento App*/
+.App {
+  /* Visuals */
+  /* CHANGE FUTURALLY TO BE PRETTIER */
+  background-color: black;
+  height: 100vh; /* Viewer Height (vh): independente do tamanho da tela, o elemento tera essa porcentagem da tela */
+  
+  /* Center o rectangle */
+  display: grid;
+  place-items: center;
+}
+
+/* Container que vai renderizar os videos */
+.app__videos {
+  /*Structure*/
+  height: 100vh; /* Viewer Height (vh) again */
+  max-height: 800px;
+
+  width: 80%; /* Width nao pode ser sempre 80% (if resize, 80% always: por isso usa max-width) */
+  max-width: 500px; /* Chega ate 500 e para */
+
+  /*Visuals*/
+  border: 1px solid red;
+  border-radius: 20px;
+  overflow: scroll; /* Mantem os elementos dentro do container, sem esticar e passar da borda */
+  scrollbar-width: none; /* Esconde a barra de scroll */
+
+  /* Snap pra scrollar com o mouse na axis vertical e ele grudar no proximo video quando scrolla */
+  scroll-snap-type: y mandatory;
+  /* Para que componentes que estarao na frente dele tenham posicao absoluta */
+  position: relative; /*video.css tambem*/
+}
+
+/* Esconde a scroll bar no chrome, safari e opera */
+.app__videos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Esconde a scroll bar no internet explorer, edge e firefox */
+.app__videos::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
