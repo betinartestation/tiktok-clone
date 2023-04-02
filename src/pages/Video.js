@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react'
-import VideoFooter from "./components/footer/VideoFooter" /* Importar o arquivo footer para esse file */
+import VideoFooter from "./components/footer/VideoFooter" /* Importar o arquivo js footer para esse file */
+import VideoSideBar from './components/sidebar/VideoSideBar'; /* Importar o arquivo js sidebar para esse file */
 import "./video.css"; 
 
-function Video() {
+function Video({likes, comments, shares}) {
   
   /* Play e Pause no click do mouse */
   const videoRef = useRef(null); /* Criar uma referencia que estamos conectando a esse video especifico */
@@ -35,6 +36,11 @@ function Video() {
         
         </video>
         {/* Side Bar */}
+        <VideoSideBar 
+          likes={likes}
+          comments={comments}
+          shares={shares}
+        />
 
         {/* Footer */}
         <VideoFooter />
