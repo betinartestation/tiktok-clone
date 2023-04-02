@@ -1,0 +1,80 @@
+.videoFooter {
+    /* Structure */
+    position: relative;
+    bottom: 20%; /* Nao precisa ficar testando um pixel por vez, pode ja colocar em porcentagem (ocupa 20%) */
+    margin-left: 30px;
+
+    /* Visuals */
+    color: white;
+}
+
+.videoFooter__text h3,
+.videoFooter__text p
+ {
+    padding-bottom: 20px;
+}
+
+/*.videoFooter__text p {
+    padding-bottom: 20px;
+}*/
+
+.videoFooter__music {
+    display: flex;
+}
+
+
+.videoFooterMusic__text { /* se eu editasse a animacao aqui a caixinha inteira se mexeria */
+    /* Structure */
+    width: 80%;
+
+    /* Visuals */
+    overflow-x: hidden;
+}
+
+/**/
+
+.videoFooterMusic__text p {
+    animation: moveTheText 3s infinite linear;
+}
+
+.videoFooter__record {
+    /* Animacao */
+    animation: spinTheRecord 2s infinite linear;
+    /*
+    Shorthand => animation: name speed loop type
+        2s: velocidade da animacao
+        infinite: deixa animacao em looping
+        linear: nao faz a animacao parar
+    */
+
+    /* Structure */
+    position: absolute;
+    bottom: 5%; /*bottom: 5px; Codigo original mas preferi manter em porcentagem*/
+    right: 20px; /* 20px from right side */
+    height: 50px;
+
+    /* Visuals */
+    filter: invert(1);
+}
+
+/* Criar animacao para rotacionar o disco */
+@keyframes spinTheRecord {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Criar animacao do titulo da musica andando */
+@keyframes moveTheText {
+    0% {
+        transform: translateX(100%); /* ele comeca da metade pq nao eh 100% da tela, mas sim, do container videoFooterMusic__text */
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
