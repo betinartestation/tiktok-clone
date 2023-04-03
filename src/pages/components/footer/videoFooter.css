@@ -78,3 +78,14 @@
         transform: translateX(-100%);
     }
 }
+
+/* Responsiveness */
+@media only screen and (max-width: 440px) { /* confirmar melhor oq isso significa */
+    .videoFooter {
+      bottom: 22%;
+    }
+
+    .videoFooterMusic__text {
+        width: 78%;
+    }
+  }

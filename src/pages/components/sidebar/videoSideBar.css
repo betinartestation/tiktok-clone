@@ -13,3 +13,10 @@
     padding: 20px;
     text-align: center;
 }
+
+/* Responsiveness */
+@media only screen and (max-width: 440px) { /* confirmar melhor oq isso significa */
+    .videoSideBar {
+      top: 46%;
+    }
+  }

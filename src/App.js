@@ -3,7 +3,7 @@ import "./App.css";
 import Video from "./pages/Video.js"; /*Importar o componente video deste diretorio*/
 import db from "./config/firebase";
 import {collection, getDocs } from 'firebase/firestore/lite';
-import { configure } from "@testing-library/react";
+import { configure } from "@testing-library/react"; /* Use essa variavel! */
 
 function App() {
   
@@ -49,7 +49,3 @@ function App() {
 }
 
 export default App;
-
-// - Set config with firebase.js inside
-// - Which information and utilities I am using
-// - Render videos dynamically, without having to enter the code and changing each info by hand

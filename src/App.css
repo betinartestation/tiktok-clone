@@ -45,3 +45,11 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Responsiveness */
+@media only screen and (max-width: 440px) { /* confirmar melhor oq isso significa */
+  .app__videos {
+    width: 100%;
+    height: 100vh;
+  }
+}
