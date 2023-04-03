@@ -3,7 +3,8 @@ import VideoFooter from "./components/footer/VideoFooter" /* Importar o arquivo 
 import VideoSideBar from './components/sidebar/VideoSideBar'; /* Importar o arquivo js sidebar para esse file */
 import "./video.css"; 
 
-function Video({likes, comments, shares}) {
+/* Trazer variaveis do App para o Video */ 
+function Video({likes, comments, shares, username, description, music, url}) {
   
   /* Play e Pause no click do mouse */
   const videoRef = useRef(null); /* Criar uma referencia que estamos conectando a esse video especifico */
@@ -31,7 +32,7 @@ function Video({likes, comments, shares}) {
             ref={videoRef}
             onClick={handleStart}
             loop
-            src="https://firebasestorage.googleapis.com/v0/b/jornada-b5e9d.appspot.com/o/brecker2.mp4?alt=media&token=9aa979e9-0907-4093-abd5-a71efe4fc946"
+            src={url}
         >
         
         </video>
@@ -43,7 +44,11 @@ function Video({likes, comments, shares}) {
         />
 
         {/* Footer */}
-        <VideoFooter />
+        <VideoFooter 
+          username={username}
+          description={description}
+          music={music}
+        />
     </div>
   )
 }

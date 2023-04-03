@@ -3,16 +3,16 @@ import React from 'react'
 import "./videoFooter.css"
 import MusicNoteIcon from '@mui/icons-material/MusicNote'; /* Importar icon library MUI do React (precisa instalar primeiro)  */
 
-function VideoFooter() {
+function VideoFooter({username, description, music}) {
   return (
     <div className='videoFooter'>
         <div className='videoFooter__text'>
-            <h3>@bbetinapp</h3>
-            <p>Descricao do video</p>
+            <h3>@{ username }</h3>
+            <p> { description } </p>
             <div className='videoFooter__music'>
                 <MusicNoteIcon className='videoFooter__icon'/>
                 <div className='videoFooterMusic__text'> {/* Titulo tem que estar separado: pq? */}
-                    <p>Titulo da musica</p>
+                    <p> { music } </p>
                 </div>
             </div>
             

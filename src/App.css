@@ -21,10 +21,10 @@ html {
   max-height: 800px;
 
   width: 80%; /* Width nao pode ser sempre 80% (if resize, 80% always: por isso usa max-width) */
-  max-width: 500px; /* Chega ate 500 e para */
+  max-width: 450px; /* Chega ate 500 e para */
 
   /*Visuals*/
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   border-radius: 20px;
   overflow: scroll; /* Mantem os elementos dentro do container, sem esticar e passar da borda */
   scrollbar-width: none; /* Esconde a barra de scroll */
