@@ -6,7 +6,12 @@ import {collection, getDocs } from 'firebase/firestore/lite';
 import { configure } from "@testing-library/react"; /* Use essa variavel! */
 
 function App() {
-  
+  /* Adaptar conteudo a diferentes telas otimizado para diferentes navegadores mobile */
+  let maxHeight;
+  if(window.innerHeight <= 800){
+    maxHeight = window.innerHeight
+  }
+
   const [videos, setVideos] = useState([])
 
   async function getVideos() {
@@ -16,7 +21,6 @@ function App() {
     const videosSnapshot = await getDocs(videosCollection); /* async + await precisa esperar pegar as informacoes do return para poder renderizar esse codigo */
     const videosList = videosSnapshot.docs.map((doc) => doc.data()); /* Logica propria do firebase, siga a sintaxe com detalhes */
     setVideos(videosList);
-
   }
 
   useEffect(()=> {
@@ -24,7 +28,9 @@ function App() {
   }, []) /* [] impede um looping indesejado, atualizara um video novo com f5, nao automaticamente */
   
   return (
-    <div className="App">
+    <div className="App"
+      style={{ maxHeight: maxHeight }}
+    >
       <div className="app__videos">
 
         {/* Preparando o BackEnd */}
