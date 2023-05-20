@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer"
 import "./video.css"; 
 
 /* Trazer variaveis do App para o Video */ 
-function Video({likes, comments, shares, username, description, music, url}) {
+function Video({/* profile_pic,  profile_plus-icon, */likes, comments, shares, username, description, music, url}) {
   
   /* Parar o video quando sair da tela */
 

@@ -5,7 +5,7 @@ import ChatIcon from '@mui/icons-material/Chat'; /* Comment icon */
 import ShareIcon from '@mui/icons-material/Share'; /* Share icon */
 import "./videoSideBar.css"
 
-function VideoSideBar({likes, comments, shares}) {
+function VideoSideBar({ /* profile_pic,  profile_plus-icon, */ likes, comments, shares}) {
 
     const [liked, setLiked] = useState(false) /* Incializa como falso */
 
@@ -15,6 +15,19 @@ function VideoSideBar({likes, comments, shares}) {
 
     return (
         <div className="videoSideBar">
+           <div className='videoSideBar__options'>
+                <img 
+                    className='videoSideBar__profile'
+                    alt='pic'
+                    src='https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg'
+                />
+                <img
+                    className='videoSideBar__plus-icon'
+                    alt='icon'
+                    src='https://www.svgrepo.com/download/68819/plus.svg'
+                />
+           </div>
+
             <div 
                 className="videoSideBar__options"
                 onClick={handdleLike}

@@ -1,8 +1,8 @@
 .videoSideBar {
     /* Structure */
     position: absolute;
-    top: 50%;
-    right: 10px;
+    top: 35%;
+    right: 5px;
 
     /* Visuals */
     color: white;
@@ -12,6 +12,20 @@
     /* Structure */
     padding: 20px;
     text-align: center;
+}
+
+.videoSideBar__options .videoSideBar__profile {
+  margin: 0;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.videoSideBar__options .videoSideBar__plus-icon {
+  position: absolute;
+  margin: 0;
+  height: 20px;
+  right: 34px;
+  top: 60px;
 }
 
 /* Responsiveness */

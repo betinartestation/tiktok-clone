@@ -3,7 +3,7 @@ import "./App.css";
 import Video from "./pages/Video.js"; /*Importar o componente video deste diretorio*/
 import db from "./config/firebase";
 import {collection, getDocs } from 'firebase/firestore/lite';
-import { configure } from "@testing-library/react"; /* Use essa variavel! */
+/* import { configure } from "@testing-library/react"; Use essa variavel! */
 
 function App() {
   /* Adaptar conteudo a diferentes telas otimizado para diferentes navegadores mobile */
@@ -38,6 +38,9 @@ function App() {
         { videos.map((item) => { /* Cada item sera renderizado diferente com as informacoes daquele item */
           return (
             <Video /* Chama cada variavel de cada elemento dentro da pasta videos da minha database */
+              /* Nao esqueca de adicionar isso no database pra poder incluir fotos e icones uploaded direto do firebase */
+              /* profile_pic={item.profile_pic} */
+              /* profile_plus-icon={item.profile_plus-icon} */
               likes={item.likes}
               comments={item.comments}
               shares={item.shares}
